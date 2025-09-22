@@ -1,0 +1,113 @@
+body {
+    background-color: #001f3f; /* Navy blue background */
+    color: #f4f4f4; /* Light text color for contrast */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #001f3f; /* Navy blue background */
+    color: #f4f4f4; /* Light text color */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 4px solid #f4f4f4; /* Light border around profile picture */
+}
+
+.bio {
+    font-size: 1.2em;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #f4f4f4; /* Light color for headings */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Flexbox Layout for Sliders */
+.video-slider, .image-slider {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.video-slider .video-item, .image-slider .image-item {
+    position: relative;
+    flex: 1;
+    margin: 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(30, 71, 112, 0.6); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-slider .video-item.middle{
+    flex:1;
+}
+
+.image-slider .image-item.middle {
+    flex: 1.5;
+    flex-shrink: unset; /* Make the middle item larger */
+}
+
+.video-item, .image-item {
+    border-radius: 10px;
+}
+
+.video-item:hover, .image-item:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* Enhanced shadow on hover */
+}
+
+.video {
+    width: 100%;
+    height:100%;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.popup {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8); /* Darker background for popup */
+    color: #f4f4f4; /* Light text color */
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+.image-item:hover .popup {
+    display: block;
+}
